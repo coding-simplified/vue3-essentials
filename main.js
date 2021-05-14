@@ -1,7 +1,8 @@
 const app = Vue.createApp({
     data: function() {
         return {
-           name: "Mayank Chaudhari" 
+           title: "Graphics Design & Website",
+           img: "/assets/graphics.gif" 
         }
     }
 });
