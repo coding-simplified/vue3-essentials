@@ -13,10 +13,13 @@
 
 <body>
     <div id="app">
-        <div class="flx">
-            <img :src="img" :alt="title">
+        <div v-for="(val, key) in serveices" :key="`uni${key}`" class="flx">
+            <img :src="val.img" :alt="title">
             <div>
-                <h1> {{title}} </h1>
+                <h1> {{val.title}} </h1>
+                <ul>
+                    <li v-for="(item, ind) in val.details" :key="ind">{{item}}</li>
+                </ul>
             </div>
         </div>
     </div>
