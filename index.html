@@ -14,7 +14,8 @@
 <body>
     <div id="app">
         <div class="flx">
-            <img :src="img" :alt="title">
+            <img v-show="showImg > 2" :src="img" :alt="title">
+
             <div>
                 <h1> {{title}} </h1>
             </div>

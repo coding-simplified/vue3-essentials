@@ -2,7 +2,8 @@ const app = Vue.createApp({
     data: function() {
         return {
            title: "Graphics Design & Website",
-           img: "/assets/graphics.gif" 
+           img: "/assets/graphics.gif",
+           showImg: 2 
         }
     }
 });
