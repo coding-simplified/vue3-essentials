@@ -36,6 +36,11 @@ const app = Vue.createApp({
             ]
         }
     },
+    methods: {
+        sayHi() {
+            alert('Hi');
+        }
+    }
 });
 
 const mountedApp = app.mount('#app');
