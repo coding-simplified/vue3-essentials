@@ -24,7 +24,7 @@ const app = Vue.createApp({
                 },
                 custom: {
                     title: "Custom Solutions",
-                    img: "/assets/vb.jpg",
+                    img: "/assets/custom-cloud.gif",
                     details: ['Awesome Computer vision projects', 'some other stuff', 'some other stuff', 'bla bla bla']
                 }
             }
