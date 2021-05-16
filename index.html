@@ -13,7 +13,7 @@
 
 <body>
     <div id="app">
-        <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer">
+        <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">
             <div :class="{[cls]: true, flxflip: key%2}">
                 <img :src="val.img" :alt="title">
                 <div>
