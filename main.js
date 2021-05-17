@@ -9,6 +9,7 @@ const app = Vue.createApp({
             phone: '',
             message: '',
             // ----
+            showModal: false,
             cls: 'flx',
             serveices: [
                 {

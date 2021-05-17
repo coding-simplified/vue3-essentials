@@ -14,9 +14,9 @@
 <body>
     <div id="app">
         <div class="slides">
-            <button class="btn" v-on:click="serveices={}">GET IN TOUCH</button>
+            <button class="btn" @click="showModal=true">GET IN TOUCH</button>
         </div>
-        <div class="modal">
+        <div v-show="showModal" class="modal" @click.self="showModal=false">
             <div class="modal-dialogue">
                 <h1>Let us contact you</h1>
                 <hr>
