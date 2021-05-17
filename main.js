@@ -49,6 +49,11 @@ const app = Vue.createApp({
         sayHi() {
             alert('Hi');
         }
+    },
+    computed: {
+        fullName() {
+            return this.prefix + " " + this.firstName + " " + this.lastName;
+        }
     }
 });
 
