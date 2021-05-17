@@ -24,7 +24,7 @@
                     <fieldset>
                         <legend>Name</legend>
                         <p>
-                            <select>
+                            <select v-model="prefix">
                                 <option value="Dr">Dr</option>
                                 <option value="Mr">Mr</option>
                                 <option value="Mrs">Mrs</option>
@@ -32,10 +32,13 @@
                             </select>
                         </p>
                         <p>
-                            <input type="text" placeholder="First Name">
+                            <input v-model="firstName" type="text" placeholder="First Name">
                         </p>
                         <p>
-                            <input type="text" placeholder="Last Name">
+                            <input v-model="lastName" type="text" placeholder="Last Name">
+                        </p>
+                        <p>
+                            {{prefix}} {{firstName}} {{lastName}}
                         </p>
                     </fieldset>
                     <fieldset>
