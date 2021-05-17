@@ -16,6 +16,50 @@
         <div class="slides">
             <button class="btn" v-on:click="serveices={}">GET IN TOUCH</button>
         </div>
+        <div class="modal">
+            <div class="modal-dialogue">
+                <h1>Let us contact you</h1>
+                <hr>
+                <form>
+                    <fieldset>
+                        <legend>Name</legend>
+                        <p>
+                            <select>
+                                <option value="Dr">Dr</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                            </select>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="First Name">
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Last Name">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contact Details</legend>
+                        <p>
+                            <input type="email" placeholder="Email">
+                        </p>
+                        <p>
+                            <input type="tel" placeholder="Phone Number">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Message</legend>
+                        <p>
+                            <textarea id="message" cols="35" rows="3"></textarea>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
+            </div>
+        </div>
         <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">
             <div :class="{[cls]: true, flxflip: key%2}">
                 <img :src="val.img" :alt="title">

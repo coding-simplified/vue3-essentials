@@ -75,3 +75,72 @@ html,
 .btn:hover {
     background: #000;
 }
+
+.modal {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000a;
+    z-index: 100;
+}
+
+.modal-dialogue {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 100px;
+    min-height: 100px;
+    text-align: center;
+}
+
+.modal-dialogue * {
+    border-radius: 5px;
+    outline: none;
+}
+
+fieldset {
+    text-align: start;
+}
+
+.modal-dialogue p {
+    position: relative;
+    padding: 2%;
+}
+
+label {
+    position: absolute;
+    padding: 8px;
+    opacity: .5;
+}
+
+.active {
+    opacity: 1;
+    color: blue;
+    background: white;
+    padding: 0 5px;
+    font-size: 10px;
+    left: 13px;
+    top: 1px;
+}
+
+input,
+textarea {
+    padding: 5px;
+    width: 96%;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    color: white;
+}

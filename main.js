@@ -1,6 +1,14 @@
 const app = Vue.createApp({
     data: function () {
         return {
+            // for form
+            prefix: 'Dr',
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            message: '',
+            // ----
             cls: 'flx',
             serveices: [
                 {
