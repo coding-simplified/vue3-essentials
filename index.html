@@ -16,9 +16,7 @@
         <div class="slides">
             <button class="btn" @click="showModal=true">GET IN TOUCH</button>
         </div>
-        <div v-show="showModal" class="modal" @click.self="showModal=false">
-            <modal-dialogue></modal-dialogue>
-        </div>
+        <modal :show-modal="showModal"></modal>
         <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">
             <div :class="{[cls]: true, flxflip: key%2}">
                 <img :src="val.img" :alt="title">
@@ -32,6 +30,10 @@
         </div>
     </div>
     <script src="main.js"></script>
+    <script src="modal.js"></script>
+    <script>
+        const mountedApp = app.mount('#app');
+    </script>
 </body>
 
 </html>
