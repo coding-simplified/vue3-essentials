@@ -66,5 +66,10 @@ app.component('modal', {
             return this.prefix + " " + this.firstName + " " + this.lastName;
         }
     },
-    props: ['showModal']
+    props: {
+        showModal: {
+            type: Boolean,
+            required: true,
+        }
+    }
 })
