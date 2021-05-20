@@ -67,9 +67,7 @@ app.component('modal', {
         }
     },
     emits: {
-        hideModal: function(){
-            return this.firsrName && this.lastName;
-        }
+        hideModal: null
     },
     computed: {
         fullName() {
