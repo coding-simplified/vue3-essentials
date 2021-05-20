@@ -1,7 +1,7 @@
 
 app.component('modal', {
     template: `
-    <div v-show="showModal" class="modal" @click.self="showModal=false">
+    <div v-show="$attrs['show-modal']" class="modal" @click.self="showModal=false">
         <div class="modal-dialogue">
                 <h1>Let us contact you</h1>
                 <hr>
@@ -64,12 +64,6 @@ app.component('modal', {
     computed: {
         fullName() {
             return this.prefix + " " + this.firstName + " " + this.lastName;
-        }
-    },
-    props: {
-        showModal: {
-            type: Boolean,
-            required: true,
         }
     }
 })
