@@ -63,11 +63,11 @@ app.component('modal', {
     },
     methods: {
         emitEvent(){
-            this.$emit('hideModal');
+            this.$emit('update:showModal');
         }
     },
     emits: {
-        hideModal: null
+        'update:showModal': null
     },
     computed: {
         fullName() {
