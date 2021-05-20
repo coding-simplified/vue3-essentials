@@ -1,7 +1,7 @@
 
 app.component('modal', {
     template: `
-    <div v-show="showModal" class="modal" @click.self="showModal=false">
+    <div v-show="showModal" class="modal" @click.self="emitEvent()">
         <div class="modal-dialogue">
                 <h1>Let us contact you</h1>
                 <hr>
@@ -59,6 +59,16 @@ app.component('modal', {
             phone: '',
             message: '',
             // ----
+        }
+    },
+    methods: {
+        emitEvent(){
+            this.$emit('hideModal');
+        }
+    },
+    emits: {
+        hideModal: function(){
+            return this.firsrName && this.lastName;
         }
     },
     computed: {
