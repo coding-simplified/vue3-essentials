@@ -38,7 +38,8 @@ const app = Vue.createApp({
         }
     },
     components: {
-        modal
+        modal,
+        navbar
     },
     methods: {
         sayHi() {

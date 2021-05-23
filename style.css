@@ -3,9 +3,10 @@
 * {
     max-width: 1600px;
     margin: auto;
-    transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: 0.2s all cubic-bezier(0.65, 0.05, 0.36, 1);
     color: #2c3e50;
     cursor: unset;
+    box-sizing: border-box;
 }
 
 body,
@@ -57,7 +58,8 @@ html,
     background-size: cover;
     background-position: center;
     flex-direction: column;
-    /* padding: 20px; */
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 .btn {
@@ -143,4 +145,124 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: green;
     color: white;
+}
+
+
+/* header */
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: transparent;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+nav.tr {
+    background: white;
+    box-shadow: #5555 0 0 0 2px;
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    height: 50px;
+}
+
+.nav-item {
+    display: inline-block;
+    position: relative;
+    padding: 10px 0;
+    margin: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-item * {
+    text-decoration: none;
+}
+
+.nav-item:hover,
+.popup li:hover,
+.active {
+    border-bottom: 2px solid #756aee;
+    transform: translateY(-5%);
+    filter: drop-shadow(0px 0px 15px #fff);
+}
+
+.nav img {
+    height: 195%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.nav img:hover {
+    filter: drop-shadow(-4px 8px 10px #756aee);
+    transition: all 0.1s;
+}
+
+.menu {
+    padding: 5px;
+    margin-right: 15px;
+    transform: scale(0.7, 0.7);
+    cursor: pointer;
+}
+
+#bar1,
+#bar2,
+#bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+.open {
+    transform: rotate(180deg) scale(0.7, 0.7);
+}
+
+.open #bar1 {
+    transform: rotate(45deg) translate(10px, -7px);
+    width: 20px;
+}
+
+.open #bar3 {
+    transform: rotate(-45deg) translate(10px, 7px);
+    width: 20px;
+}
+
+.popup {
+    position: absolute;
+    list-style: none;
+    padding: 15px;
+    margin-top: 12px;
+    margin-left: -10px;
+    line-height: 38px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #0005;
+    background: #fff;
+    /* display: none; */
+}
+
+.nav-item:hover .popup {
+    display: inherit;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all .5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
