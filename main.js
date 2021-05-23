@@ -37,6 +37,9 @@ const app = Vue.createApp({
             ]
         }
     },
+    components: {
+        modal
+    },
     methods: {
         sayHi() {
             alert('Hi');

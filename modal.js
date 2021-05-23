@@ -1,5 +1,4 @@
-
-app.component('modal', {
+const modal = {
     template: `
     <div v-show="showModal" class="modal" @click.self="emitEvent()">
         <div class="modal-dialogue">
@@ -80,4 +79,6 @@ app.component('modal', {
             required: true,
         }
     }
-})
+}
+
+// app.component('modal', modal);
