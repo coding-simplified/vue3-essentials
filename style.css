@@ -72,6 +72,16 @@ html,
     font-size: 1.5em;
     cursor: pointer;
     text-transform: capitalize;
+    animation: grow-in-out 1s linear infinite alternate-reverse;
+}
+
+@keyframes grow-in-out {
+    to {
+        transform: scale(1, 1);
+    }
+    from {
+        transform: scale(.8, .8);
+    }
 }
 
 .btn:hover {
