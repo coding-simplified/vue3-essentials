@@ -12,11 +12,13 @@ const menuItem = {
         </span>
         <div v-else>
             {{name}}
+            <transition name="fade">
                 <ul class="popup" v-show="showChild">
                     <li v-for="(link, name) in val">
                         <a :href="link" target="_blank" rel="noopener noreferrer">{{name}}</a>
                     </li>
                 </ul>
+            </transition>
         </div>
     </div>
     `
