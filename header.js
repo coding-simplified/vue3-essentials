@@ -6,13 +6,13 @@ const menuItem = {
         }
     },
     template: /*html */ `
-    <div class="nav-item" @mouseover="showChild=true" @mouseout="showChild=false">
+    <div class="nav-item" @mouseenter="showChild=true" @mouseleave="showChild=false">
         <span v-if="typeof val === 'string' || val instanceof String">
             <a :href="val" target="_blank" rel="noopener noreferrer">{{name}}</a>
         </span>
         <div v-else>
             {{name}}
-            <transition name="fade">
+            <transition name="bounce">
                 <ul class="popup" v-show="showChild">
                     <li v-for="(link, name) in val">
                         <a :href="link" target="_blank" rel="noopener noreferrer">{{name}}</a>
