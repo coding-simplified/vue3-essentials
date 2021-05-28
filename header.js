@@ -12,7 +12,7 @@ const menuItem = {
         </span>
         <div v-else>
             {{name}}
-            <transition name="bounce">
+            <transition enter-active-class="animate__bounceIn" leave-active-class="animate__bounceOut">
                 <ul class="popup" v-show="showChild">
                     <li v-for="(link, name) in val">
                         <a :href="link" target="_blank" rel="noopener noreferrer">{{name}}</a>
