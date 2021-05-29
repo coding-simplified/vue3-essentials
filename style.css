@@ -3,6 +3,7 @@
 * {
     max-width: 1600px;
     margin: auto;
+    border: none;
     transition: 0.2s all cubic-bezier(0.65, 0.05, 0.36, 1);
     color: #2c3e50;
     cursor: unset;
@@ -62,10 +63,49 @@ html,
     padding-bottom: 20px;
 }
 
+.slide {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+.slide h1 {
+    padding: 10px;
+    font-weight: 700;
+    color: #151515;
+    font-size: 3em;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slide p {
+    color: #151515;
+    padding: 10px;
+    max-width: 520px;
+    font-weight: bold;
+    text-align: center;
+    opacity: .8;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
 .btn {
     padding: 18px 30px;
     background: #756aee;
     margin: auto;
+    margin-top: 20px;
     color: white;
     border-radius: 5px;
     font-weight: bold;
