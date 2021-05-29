@@ -15,8 +15,8 @@
 <body>
     <div id="app">
         <navbar></navbar>
-        <div class="slides">
-            <button class="btn" @click="showModal=true">GET IN TOUCH</button>
+        <div>
+            <slide v-for="slide in slides" :slide="slide"></slide>
         </div>
         <modal v-model:show-modal="showModal"></modal>
         <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">
@@ -33,6 +33,7 @@
     </div>
     <script src="header.js"></script>
     <script src="modal.js"></script>
+    <script src="slide.js"></script>
     <script src="main.js"></script>
     <script>
         const mountedApp = app.mount('#app');

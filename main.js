@@ -2,7 +2,7 @@ const slides = [
     {
         title: 'Business Consulting',
         description: 'We have partnered with Dr. Vivek Bindra and Bada Business to empower youth, small businesses, MSMEs and SMEs with the most affordable and high quality entrepreneurial Skills & Knowledge.',
-        images: ['/assets/vb.jpg', '/assets/vb1.jpg', '/assets/vb2.jpg',]
+        images: ['/assets/vb.jpg', '/assets/vb1.jpg', '/assets/vb2.jpg']
     },
     {
         title: '100% Customer Satisfaction',
@@ -20,6 +20,7 @@ const app = Vue.createApp({
     data: function () {
         return {
             showModal: false,
+            slides,
             cls: 'flx',
             serveices: [
                 {
@@ -56,6 +57,7 @@ const app = Vue.createApp({
         }
     },
     components: {
+        slide,
         modal,
         navbar
     },
