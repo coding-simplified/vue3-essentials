@@ -12,13 +12,13 @@ const menuItem = {
         </span>
         <div v-else>
             {{name}}
-            <transition enter-active-class="animate__bounceIn" leave-active-class="animate__bounceOut">
-                <ul class="popup" v-show="showChild">
-                    <li v-for="(link, name) in val">
+                    
+                <transition-group enter-active-class="animate__bounceIn" leave-active-class="animate__bounceOut" tag="ul" class="popup">
+                    <li v-for="(link, name) in val" v-show="showChild" :key="name">
                         <a :href="link" target="_blank" rel="noopener noreferrer">{{name}}</a>
                     </li>
-                </ul>
-            </transition>
+                </transition-group>
+            
         </div>
     </div>
     `

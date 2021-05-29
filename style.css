@@ -254,7 +254,6 @@ nav.tr {
 .popup {
     position: absolute;
     list-style: none;
-    padding: 15px;
     margin-top: 12px;
     margin-left: -10px;
     line-height: 38px;
@@ -265,6 +264,7 @@ nav.tr {
 }
 
 .nav-item:hover .popup {
+    padding: 15px;
     display: inherit;
 }
 
