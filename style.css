@@ -320,8 +320,6 @@ nav.tr {
 
 .slide-up-enter-active,
 .slide-up-leave-active,
-.slide-right-enter-active,
-.slide-right-leave-active,
 .slide-enter-active,
 .slide-leave-active {
     transition: all .75s ease-in-out;
@@ -331,14 +329,24 @@ nav.tr {
     transform: translateX(-100%);
 }
 
+.slide-left-leave-to,
+.slide-left-enter-from,
 .slide-enter-from {
     transform: translateX(100%);
+    opacity: 0;
 }
 
 .slide-up-leave-to,
 .slide-up-enter-from {
     transform: translateY(80px) scale(.5, .5);
     opacity: 0;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition: all 1.25s ease-in-out;
 }
 
 .slide-right-leave-to,
