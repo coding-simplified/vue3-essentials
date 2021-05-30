@@ -16,7 +16,7 @@
     <div id="app">
         <navbar></navbar>
         <div>
-            <slide v-for="slide in slides" :slide="slide"></slide>
+            <slide @get-in-touch="showModal=true" v-for="slide in slides" :slide="slide"></slide>
         </div>
         <modal v-model:show-modal="showModal"></modal>
         <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">

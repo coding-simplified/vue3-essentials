@@ -4,9 +4,14 @@ const slide = {
                 <span class="spacer"></span>
                 <h1>{{slide.title}}</h1>
                 <p>{{slide.description}}</p>
-                <button class="btn" @click="showModal=true">GET IN TOUCH</button>
+                <button class="btn" @click="getInTouch()">GET IN TOUCH</button>
                 <span class="spacer"></span>
             </div>
     `,
+    methods: {
+        getInTouch() {
+            this.$emit('getInTouch');
+        }
+    },
     props: ['slide']
 }
