@@ -3,7 +3,6 @@
 * {
     max-width: 1600px;
     margin: auto;
-    border: none;
     transition: 0.2s all cubic-bezier(0.65, 0.05, 0.36, 1);
     color: #2c3e50;
     cursor: unset;
@@ -113,6 +112,7 @@ html,
     cursor: pointer;
     text-transform: capitalize;
     animation: grow-in-out 1s linear infinite alternate-reverse;
+    border: none;
 }
 
 @keyframes grow-in-out {
@@ -316,6 +316,19 @@ nav.tr {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: all .75s ease-in-out;
+}
+
+.slide-leave-to {
+    transform: translateX(-100%);
+}
+
+.slide-enter-from {
+    transform: translateX(100%);
 }
 
 .bounce-enter-to {
