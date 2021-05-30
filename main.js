@@ -65,7 +65,7 @@ const app = Vue.createApp({
     mounted() {
         setInterval(()=>{
             this.slide_ind = (this.slide_ind + 1) % this.slides.length;
-        }, 1500)
+        }, 3500)
     },
     methods: {
         sayHi() {

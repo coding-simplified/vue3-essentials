@@ -111,7 +111,7 @@ html,
     font-size: 1.5em;
     cursor: pointer;
     text-transform: capitalize;
-    animation: grow-in-out 1s linear infinite alternate-reverse;
+    /* animation: grow-in-out 1s linear infinite alternate-reverse; */
     border: none;
 }
 
@@ -318,6 +318,10 @@ nav.tr {
     opacity: 0;
 }
 
+.slide-up-enter-active,
+.slide-up-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active,
 .slide-enter-active,
 .slide-leave-active {
     transition: all .75s ease-in-out;
@@ -329,6 +333,17 @@ nav.tr {
 
 .slide-enter-from {
     transform: translateX(100%);
+}
+
+.slide-up-leave-to,
+.slide-up-enter-from {
+    transform: translateY(80px) scale(.5, .5);
+    opacity: 0;
+}
+
+.slide-right-leave-to,
+.slide-right-enter-from {
+    transform: translateX(-100%);
 }
 
 .bounce-enter-to {
