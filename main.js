@@ -21,6 +21,7 @@ const app = Vue.createApp({
         return {
             showModal: false,
             slides,
+            slide_ind: 0,
             cls: 'flx',
             serveices: [
                 {
@@ -60,6 +61,11 @@ const app = Vue.createApp({
         slide,
         modal,
         navbar
+    },
+    mounted() {
+        setInterval(()=>{
+            this.slide_ind = (this.slide_ind + 1) % this.slides.length;
+        }, 1500)
     },
     methods: {
         sayHi() {

@@ -15,8 +15,11 @@
 <body>
     <div id="app">
         <navbar></navbar>
-        <div>
-            <slide @get-in-touch="showModal=true" v-for="slide in slides" :slide="slide"></slide>
+        <div class="slides_spacing"></div>
+        <div class="slides">
+            <transition name="slide">
+                <slide @get-in-touch="showModal=true" :slide="slides[slide_ind]" :key="slide_ind"></slide>
+            </transition>
         </div>
         <modal v-model:show-modal="showModal"></modal>
         <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">

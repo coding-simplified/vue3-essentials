@@ -49,20 +49,20 @@ html,
 }
 
 .slides {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 0;
     width: 100%;
-    min-height: 25vh;
-    background-size: cover;
-    background-position: center;
-    flex-direction: column;
-    padding-top: 80px;
-    padding-bottom: 20px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.slides_spacing {
+    height: 100vh;
 }
 
 .slide {
+    position: absolute;
+    top: 0;
     display: flex;
     align-content: center;
     align-items: center;
