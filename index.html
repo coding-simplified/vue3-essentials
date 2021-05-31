@@ -23,11 +23,24 @@
         </div>
         <modal v-model:show-modal="showModal"></modal>
         <service v-for="(val, key) in serveices" :key="'uni'+key" :val="val" :i="key"></service>
+        <footer>
+            <div class="footer">
+                <footer-info></footer-info>
+                <footer-form></footer-form>
+                <footer-services :serveices="serveices"></footer-services>
+            </div>
+            <p class="copyright">
+                © {{ new Date().getFullYear() }} Krishna Apps. All Rights Reserved.
+            </p>
+        </footer>
     </div>
     <script src="header.js"></script>
     <script src="modal.js"></script>
     <script src="slide.js"></script>
     <script src="service.js"></script>
+    <script src="footer-info.js"></script>
+    <script src="footer-form.js"></script>
+    <script src="footer-services.js"></script>
     <script src="main.js"></script>
     <script>
         const mountedApp = app.mount('#app');

@@ -40,7 +40,7 @@ const app = Vue.createApp({
                     title: "Computer Vision And Analytics",
                     img: "/assets/cv1.gif",
                     details: ['Awesome Computer vision projects', 'some other stuff', 'some other stuff', 'bla bla bla'],
-                    bg: "#aaa5",
+                    bg: "#ddd",
                 },
                 {
                     title: "Business Consulting",
@@ -61,7 +61,10 @@ const app = Vue.createApp({
         slide,
         modal,
         navbar,
-        service
+        service,
+        footerInfo,
+        footerForm,
+        footerServices
     },
     mounted() {
         setInterval(()=>{
