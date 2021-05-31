@@ -60,7 +60,8 @@ const app = Vue.createApp({
     components: {
         slide,
         modal,
-        navbar
+        navbar,
+        service
     },
     mounted() {
         setInterval(()=>{

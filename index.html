@@ -22,21 +22,12 @@
             </transition>
         </div>
         <modal v-model:show-modal="showModal"></modal>
-        <div v-for="(val, key) in serveices" :key="`uni${key}`" class="svcContainer" :style="{background: val.bg}">
-            <div :class="{[cls]: true, flxflip: key%2}">
-                <img :src="val.img" :alt="title">
-                <div>
-                    <h1> {{val.title}} </h1>
-                    <ul>
-                        <li v-for="(item, ind) in val.details" :key="ind">{{item}}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <service v-for="(val, key) in serveices" :key="'uni'+key" :val="val" :i="key"></service>
     </div>
     <script src="header.js"></script>
     <script src="modal.js"></script>
     <script src="slide.js"></script>
+    <script src="service.js"></script>
     <script src="main.js"></script>
     <script>
         const mountedApp = app.mount('#app');
