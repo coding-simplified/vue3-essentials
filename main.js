@@ -44,7 +44,7 @@ const app = Vue.createApp({
                 },
                 {
                     title: "Business Consulting",
-                    img: "/vb.jpg",
+                    img: "/vue3-essentials/vb.jpg",
                     details: ['Awesome Computer vision projects', 'some other stuff', 'some other stuff', 'bla bla bla'],
                     bg: "#fff",
                 },
