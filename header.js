@@ -28,7 +28,7 @@ const navbar = {
     template: /*html */`
         <nav class="tr">
             <div class="nav">
-                <img src="/logo-blue.png" alt="Krishna Apps Logo" />
+                <img src="/vue3-essentials/logo-blue.png" alt="Krishna Apps Logo" />
                 <span ref="spacer" class="spacer"></span>
                 <menuItem :name="key" :val="val" v-for="(val, key) in menu" :key="'menu' + key"/>
             </div>

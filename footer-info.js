@@ -1,7 +1,7 @@
 const footerInfo = {
     template: /*html*/ `
     <div class="ft">
-                        <img src="/logo-inverse.png" alt="logo">
+                        <img src="/vue3-essentials/logo-inverse.png" alt="logo">
                         <p>
                             I have been offering high-quality and reliable solutions for corporate needs since 2019. I put customer satisfaction as top most priority and have been able to maintain 100% Job Success Rate with 100% 5 star feedback.
                         </p>
